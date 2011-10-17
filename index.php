@@ -193,7 +193,7 @@
                    
                 </div>
                 <div class="footer_copyright">
-                    <span> © 2011, </span> <img style="float:left;" src="images/logomini.png"/> <span> All Rights Reserved </span>
+                    <span> © 2011, </span> <img style="float:left;" alt="urbaneous mini logo" src="images/logomini.png"/> <span> All Rights Reserved </span>
                 </div>
             </div>
         </footer>
