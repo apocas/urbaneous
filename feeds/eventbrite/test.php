@@ -11,7 +11,7 @@ $authentication_tokens = array('app_key'  => 'ECGUO5VWW7L637PDDW');
 $eb_client = new Eventbrite( $authentication_tokens );
 
 // For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
-$events = $eb_client->event_search(array('city'=>'New York') );
+$events = $eb_client->event_search(array('country'=>'PT') );
 
 //mark-up the list of events that were requested 
 // render in html - ?>
