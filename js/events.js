@@ -10,6 +10,11 @@ var Events = {
                     smartBackgroundImage('images/lisbon.jpg','center');
                 });
             }
+            if(strl=="tomar"){
+                $('.header_bg').fadeOut( 'slow', function(){    
+                    smartBackgroundImage('images/tomar.jpg','center');
+                });
+            }
             if(strl=="london"){
                 $('.header_bg').fadeOut( 'slow', function(){    
                     smartBackgroundImage('images/london.jpg','center');
