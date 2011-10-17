@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/urbaneous.css" type="text/css" />
         <script>
 <<<<<<< HEAD
+<<<<<<< HEAD
         
             $(function() {
                 Engine.init();
@@ -19,6 +20,8 @@
           
 =======
             
+=======
+>>>>>>> Revert 14eecafdba9adcbd0892c89453aea9424a09a42f^..HEAD
             $(document).ready(function()
             {
                 function smartBackgroundImage(url,type){
@@ -26,9 +29,9 @@
                     $('<img />')
                     .attr('src', url)
                     .load(function(){ //attach onload to set background-image
-                        $('.header_bg').css('backgroundImage', 'url('+url+')' );
-                        $('.header_bg').css('backgroundPosition', type );
-                        $('.header_bg').fadeIn('slow');           
+                            $('.header_bg').css('backgroundImage', 'url('+url+')' );
+                            $('.header_bg').css('backgroundPosition', type );
+                            $('.header_bg').fadeIn('slow');           
                     });          
                 }
                 $(".defaultText").focus(function(srcc)
@@ -94,10 +97,11 @@
                         });
                     }
                 });
-                initiate_geolocation();
+
                 
 
             });
+<<<<<<< HEAD
             function initiate_geolocation() {  
                 navigator.geolocation.getCurrentPosition(handle_geolocation_query,handle_errors);  
             }  
@@ -133,6 +137,8 @@
            
 
 >>>>>>> teste
+=======
+>>>>>>> Revert 14eecafdba9adcbd0892c89453aea9424a09a42f^..HEAD
         </script>
         <!--[if IE]>
                 <script ƒsrc="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -242,7 +248,7 @@
                     </div>
                     <div class="footer_twitterbt"></div>
                     <div class="footer_facebt"></div>
-
+                   
                 </div>
                 <div class="footer_copyright">
                     <span> © 2011, </span> <img style="float:left;" alt="urbaneous mini logo" src="images/logomini.png"/> <span> All Rights Reserved </span>
