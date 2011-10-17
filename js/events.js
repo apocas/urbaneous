@@ -12,7 +12,7 @@ var Events = {
             }
             if(strl=="tomar"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/tomar.jpg','center');
+                    Engine.smartBackgroundImage('images/tomar.jpg','center');
                 });
             }
             if(strl=="london"){
