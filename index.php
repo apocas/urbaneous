@@ -12,12 +12,16 @@
         <script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of fe6ab18... teste
         
             $(function() {
                 Engine.init();
             });
                    
           
+<<<<<<< HEAD
 =======
             
 =======
@@ -139,6 +143,8 @@
 >>>>>>> teste
 =======
 >>>>>>> Revert 14eecafdba9adcbd0892c89453aea9424a09a42f^..HEAD
+=======
+>>>>>>> parent of fe6ab18... teste
         </script>
         <!--[if IE]>
                 <script ƒsrc="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
