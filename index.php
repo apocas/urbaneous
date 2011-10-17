@@ -76,6 +76,11 @@
                             smartBackgroundImage('images/kualalumpur.jpg','center');
                         });
                     }
+                    if(strl=="san diego"){
+                        $('.header_bg').fadeOut( 'slow', function(){    
+                            smartBackgroundImage('images/sandiego.jpg','0 -320px');
+                        });
+                    }
                 });
 
                 
