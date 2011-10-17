@@ -13,6 +13,8 @@ $eb_client = new Eventbrite( $authentication_tokens );
 // For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
 $events = $eb_client->event_search(array('country'=>'PT') );
 
+print_r($events);
+
 //mark-up the list of events that were requested 
 // render in html - ?>
 <style type="text/css">
