@@ -1,6 +1,6 @@
 <?php
 // load the API Client library
-include "../Eventbrite.php"; 
+include "Eventbrite.php"; 
 
 // Initialize the API client
 //  Eventbrite API / Application key (REQUIRED)
