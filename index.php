@@ -12,8 +12,8 @@
         <script>
         
             $(function() {
-                       Engine.init();
-                   });
+                Engine.init();
+            });
                    
           
         </script>
