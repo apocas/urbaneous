@@ -13,7 +13,6 @@
         
             $(function() {
                        Engine.init();
-                       Engine.iva = <?php echo Utils::getConf($db, 'iva_default'); ?>
                    });
                    
           
