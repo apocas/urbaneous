@@ -7,42 +7,42 @@ var Events = {
             var strl = str.toLowerCase();
             if(strl=="lisbon"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/lisbon.jpg','center');
+                    Engine.smartBackgroundImage('images/lisbon.jpg','center');
                 });
             }
             if(strl=="london"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/london.jpg','center');
+                    Engine.smartBackgroundImage('images/london.jpg','center');
                 });
             }
             if(strl=="sydney"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/sydney.jpg','bottom');
+                    Engine.smartBackgroundImage('images/sydney.jpg','bottom');
                 });
             }
             if(strl=="new york"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/newyork.jpg','top');
+                    Engine.smartBackgroundImage('images/newyork.jpg','top');
                 });
             }
             if(strl=="venezia"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/venezia.jpg','bottom');
+                    Engine.smartBackgroundImage('images/venezia.jpg','bottom');
                 });
             }
             if(strl=="shanghai"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/shanghai.jpg','center');
+                    Engine.smartBackgroundImage('images/shanghai.jpg','center');
                 });
             }
             if(strl=="kuala lumpur"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/kualalumpur.jpg','center');
+                    Engine.smartBackgroundImage('images/kualalumpur.jpg','center');
                 });
             }
             if(strl=="san diego"){
                 $('.header_bg').fadeOut( 'slow', function(){    
-                    smartBackgroundImage('images/sandiego.jpg','0 -320px');
+                    Engine.smartBackgroundImage('images/sandiego.jpg','0 -320px');
                 });
             }
         });
