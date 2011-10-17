@@ -7,8 +7,7 @@ include "Eventbrite.php";
 //   http://www.eventbrite.com/api/key/
 //  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
 //   http://www.eventbrite.com/userkeyapi
-$authentication_tokens = array('app_key'  => 'ECGUO5VWW7L637PDDW',
-                               'user_key' => 'YOUR_USER_KEY');
+$authentication_tokens = array('app_key'  => 'ECGUO5VWW7L637PDDW');
 $eb_client = new Eventbrite( $authentication_tokens );
 
 // For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
