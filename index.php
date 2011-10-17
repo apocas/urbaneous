@@ -5,90 +5,21 @@
         <title>Urbaneous - Coming Soon</title>
         <LINK REL="SHORTCUT ICON" HREF="images/favicon.ico"> 
         <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="js/engine.js"></script>
+        <script type="text/javascript" src="js/events.js"></script>
+        <script type="text/javascript" src="js/motions.js"></script>
         <link rel="stylesheet" href="css/urbaneous.css" type="text/css" />
         <script>
-            $(document).ready(function()
-            {
-                function smartBackgroundImage(url,type){
-                    //create an img so the browser will download the image:
-                    $('<img />')
-                    .attr('src', url)
-                    .load(function(){ //attach onload to set background-image
-                            $('.header_bg').css('backgroundImage', 'url('+url+')' );
-                            $('.header_bg').css('backgroundPosition', type );
-                            $('.header_bg').fadeIn('slow');           
-                    });          
-                }
-                $(".defaultText").focus(function(srcc)
-                {
-                    if ($(this).val() == $(this)[0].title)
-                    {
-                        $(this).removeClass("defaultTextActive");
-                        $(this).val("");
-                    }
-                });
-    
-                $(".defaultText").blur(function()
-                {
-                    if ($(this).val() == "")
-                    {
-                        $(this).addClass("defaultTextActive");
-                        $(this).val($(this)[0].title);
-                    }
-                });
-    
-                $(".defaultText").blur();    
-                $(".header_banner_box_button").click(function(){
-                    var str = $('#city').val();
-                    var strl = str.toLowerCase();
-                    if(strl=="lisbon"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/lisbon.jpg','center');
-                        });
-                    }
-                    if(strl=="london"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/london.jpg','center');
-                        });
-                    }
-                    if(strl=="sydney"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/sydney.jpg','bottom');
-                        });
-                    }
-                    if(strl=="new york"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/newyork.jpg','top');
-                        });
-                    }
-                    if(strl=="venezia"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/venezia.jpg','bottom');
-                        });
-                    }
-                    if(strl=="shanghai"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/shanghai.jpg','center');
-                        });
-                    }
-                    if(strl=="kuala lumpur"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/kualalumpur.jpg','center');
-                        });
-                    }
-                    if(strl=="san diego"){
-                        $('.header_bg').fadeOut( 'slow', function(){    
-                            smartBackgroundImage('images/sandiego.jpg','0 -320px');
-                        });
-                    }
-                });
-
-                
-
-            });
+        
+            $(function() {
+                       Engine.init();
+                       Engine.iva = <?php echo Utils::getConf($db, 'iva_default'); ?>
+                   });
+                   
+          
         </script>
         <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+                <script ƒsrc="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
 
     <body>
