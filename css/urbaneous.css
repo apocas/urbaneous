@@ -1,0 +1,377 @@
+/* 
+    Document   : urbaneous.css
+    Created on : 10/Out/2011, 23:51:30
+    Author     : Amiguinho
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%; 
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    background-image:url('../images/background.png');
+}
+
+@font-face {
+    font-family: sketch;
+    src: url('Sketch_Block.ttf');
+
+}
+@font-face {
+    font-family: comforta;
+    src: url('Comfortaa-Bold.ttf')
+}
+.header_bg{
+    position: absolute;
+    width:100%;
+    height:360px;
+    top:0;
+    z-index: 1;
+}
+.header{
+    padding-top:20px;
+    position: absolute;
+    width:100%;
+    float:left;
+    /*    background-image:url('../images/lisbon.jpg');*/
+    height:340px;
+    background-position: center;
+    z-index: 10;
+}
+
+.header_container{
+    width:1000px;
+    margin:0 auto;
+}
+.header_logo{
+    width:275px;
+    height:44px; 
+    float:left;
+}
+.header_nav{
+    float:right;
+    margin-top:20px;
+}
+.header_nav ul li{
+    float:left;
+    margin: 0px 25px;
+
+}
+
+.header_nav ul li a{
+    text-transform: uppercase;
+    font-family: "Helvetica Neue","Helvetica";
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    text-decoration: none;
+    font-size: 14px;
+    color:white;
+    padding: 5px 10px;
+}
+.header_nav ul li a:hover{
+    color:#2fb0dc;
+    background-color: black;
+    border-radius:5px;
+}
+.header_banner{
+    padding-top: 50px;
+    width:100%;
+    float:left;
+}
+.header_banner_left{
+    width:600px;
+    float:left;
+}
+.header_banner_right{
+    width:300px;
+    float:left;
+    margin-left: 60px;
+}
+.header_banner_headline{
+    float:left;
+    margin-left:30px;
+    line-height: 48px;
+    margin-top:25px;
+    font-family: comforta;
+    font-size:44px;
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+
+}
+.header_banner_box{
+    width:341px;
+    height: 69px;
+    background-image: url('../images/box.png');
+    float:left;
+    margin-top:10px;
+    margin-left:26px;
+}
+.header_banner_box input{
+    margin-left:20px;
+    color:#2fb0dc;
+    margin-top:10px;
+    border:none;
+    outline:0;
+    width: 300px;
+    height:50px;
+    font-family: comforta;
+    font-size: 28px;
+    font-weight: lighter;
+    background-color: transparent;
+}
+.defaultText { width: 300px;}
+.defaultTextActive { color:white; font-style: italic; }
+.header_banner_box_button{
+    width:58px;
+    height: 69px;
+    background-image: url('../images/btoff.png');
+    float:left;
+    margin-top:10px;
+}
+.header_banner_box_button:hover{
+    background-image: url('../images/bton.png');
+    cursor: pointer;
+}
+.section_white{
+    margin-top:360px;
+    width:100%;
+    float:left;
+    background-color: white;
+    height:160px;
+}
+.section_white_container{
+    width:1000px;
+    margin:0 auto;
+    padding-left: 60px;
+}
+.section_white_box{
+    height:150px;
+    margin-top:30px;
+    float:left;
+}
+.section_white_box_title{
+    color:black;
+    font-family: sketch;
+    font-size: 24px;
+}
+.section_white_box_text{
+    float:left;
+    margin-top: 15px;
+    font-family: "Lucida Sans";
+    font-style: italic;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+
+}
+.blue_transform{
+    color:#2fb0dc;
+}
+.section_white_box_separator{
+    width:1px;
+    height:100px;
+    background-color: #e8e8e8;
+    margin:0 80px;
+    float: left;
+    margin-top: 30px;
+}
+.section_gray{
+    width:100%;
+    float:left;
+    height:200px;
+    background-image:url('../images/background_gray.png');
+}
+.section_gray_container{
+    width: 1000px;
+    margin:0 auto;
+}
+.section_gray_left{
+    float:left;
+    width:450px;
+}
+.section_gray_right{
+    float:left;
+    margin-left: 200px;
+    width: 350px;
+}
+.section_gray_pcimg{
+    float:left;
+    margin-top:30px;
+    margin-left: 100px;
+}
+.section_gray_down_title{
+    float:left;
+    margin-top:50px;
+    font-family: comforta;
+    font-size:28px;
+    letter-spacing: 2px;
+    color:#2fb0dc;
+    text-shadow: 1px 1px 1px #000;
+}
+.section_gray_down_text{ 
+    float:left;
+    margin-top:0px;
+    font-family: "Helvetica Neue","Helvetica";
+    font-size:13px;
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}
+.section_gray_bt_down{
+    width:259px;
+    height:58px;
+    background-image: url('../images/downloadoff.png');
+    float:left;
+    margin-left: -5px;
+    margin-top:5px;
+}
+.section_gray_bt_down:hover{
+    background-image: url('../images/downloadon.png');
+    cursor: pointer;
+}
+.footer{
+    width:100%;
+    float:left;
+    margin-top:20px;
+    margin-bottom: 25px;
+}
+.footer_container{
+    width:1000px;
+    margin: 0 auto;
+}
+.footer_divs{
+    width:250px;
+    height:150px;
+    margin-top:30px;
+    float:left;
+}
+.footer_separator{
+    width:1px;
+    height:100px;
+    background-color: #2e2f2d;
+    margin:0 60px;
+    float: left;
+    margin-top: 30px;
+}
+.footer_divs_title{
+    color:white;
+    font-family: "Helvetica Neue","Helvetica";
+    font-weight: bold;
+    float:left;
+    text-shadow: 2px 2px 2px #000;
+}
+.footer_divs_twitter{
+    float:left;
+    width:62px;
+    margin-top:-10px;
+    height:44px;
+    background-image: url('../images/twitter.png');
+}
+.footer_divs_world{
+    float:left;
+     margin-top:-15px;
+    width:64px;
+    height:53px;
+    background-image: url('../images/worldmini.png');
+}
+.footer_twitterbt{
+    width:137px;
+    height:48px;
+    float:left;
+    margin-left: -3px;
+    background-image: url('../images/twitterbtoff.png');
+}
+.footer_twitterbt:hover{
+    background-image: url('../images/twitterbton.png');
+    cursor: pointer;
+}
+.footer_facebt{
+    width:137px;
+    height:48px;
+    float:left;
+    margin-left: 7px;
+    background-image: url('../images/facebookbtoff.png');
+}
+.footer_facebt:hover{
+    background-image: url('../images/facebookbton.png');
+    cursor: pointer;
+}
+.footer_bigbt{
+    width:274px;
+    margin-bottom: 20px;
+    height:53px;
+    background-image: url('../images/footerbigbt.png');
+    float:left;
+}
+.footer_bigbt a{
+    margin-top:15px;
+    color:#2fb0dc;
+    font-family: "Helvetica Neue","Helvetica";
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 17px;
+    float:left;
+}
+.footer_bigbt a:hover{
+    color:white;
+}
+.footer_copyright{
+    float:right;
+    font-size: 11px;
+    color:white;
+    font-family: "Helvetica Neue","Helvetica";
+    margin-right: 20px;
+}
+.footer_copyright span{
+    float:left;
+    margin-top:8px;
+    margin-left:5px;
+    margin-right:5px;
+}
