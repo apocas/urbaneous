@@ -182,7 +182,7 @@ body {
     margin-top:360px;
     width:100%;
     float:left;
-    background-color: white;
+    background-color: #f5f5f5;
     height:160px;
 }
 .section_white_container{
@@ -374,4 +374,16 @@ body {
     margin-top:8px;
     margin-left:5px;
     margin-right:5px;
+}
+.section_white_down_top1{
+    width:100%;
+    float:left;
+}
+.section_white_down_top1_left{
+    width:50%;
+    float:left;
+}
+.section_white_down_top1_right{
+    width:50%;
+    float:left;
 }
