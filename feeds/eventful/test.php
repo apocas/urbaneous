@@ -22,8 +22,8 @@ if ($user and $password) {
 // All method calls other than login() go through call().
 $args = array(
     'location' => 'Lisbon',
-    'page_size' => '100',
-    'sort_order' => 'popularity'
+    'page_size' => '50',
+    'sort_order' => 'popularity',
 );
 $event = $ev->call('events/search', $args);
 
