@@ -33,5 +33,7 @@ if (PEAR::isError($event)) {
 }
 
 // The return value from a call is a SimpleXMLElement object.
+echo "<pre>";
 print_r($event);
+echo "</pre>";
 ?>
