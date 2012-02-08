@@ -1,0 +1,43 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+    </head>
+    <body>
+        <script type="text/javascript" >
+            var oArgs = {
+                app_key: "PhSPfXsNh4bxtscN",
+                q: "Lisbon",
+                page_size: 25
+            };
+            EVDB.API.call("/events/search", oArgs, function(oData)
+            {
+                // Note: this relies on the custom toString() methods below
+                alert(oData.toString());
+            });
+
+            Object.prototype.toString = function()
+            {
+                var s = "{\n";
+                for (var x in this)
+                {
+                    s += "\t" + x + ": " + this[x].toString() + "\n";
+                }
+                s += "}";
+                return s;
+            }
+            Array.prototype.toString = function()
+            {
+                return '[' + this.join(", ") + ']';
+            }
+        </script>
+        <div>TODO write content</div>
+    </body>
+</html>
