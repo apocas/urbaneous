@@ -20,6 +20,7 @@ and open the template in the editor.
             
             
             $(document).ready(function() {
+                alert("loading...");
                 EVDB.API.call("/events/search", oArgs, function(oData)
                 {
                     // Note: this relies on the custom toString() methods below
