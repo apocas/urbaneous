@@ -17,10 +17,14 @@ and open the template in the editor.
                 q: "Lisbon",
                 page_size: 25
             };
-            EVDB.API.call("/events/search", oArgs, function(oData)
-            {
-                // Note: this relies on the custom toString() methods below
-                alert(oData.toString());
+            
+            
+            $(document).ready(function() {
+                EVDB.API.call("/events/search", oArgs, function(oData)
+                {
+                    // Note: this relies on the custom toString() methods below
+                    alert(oData.toString());
+                });
             });
 
             Object.prototype.toString = function()
