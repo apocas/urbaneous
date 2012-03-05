@@ -4,7 +4,10 @@
         <meta charset="utf-8" />
         <title>Urbaneous - Coming Soon</title>
         <LINK REL="SHORTCUT ICON" HREF="images/favicon.ico"> 
-        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+        
         <script type="text/javascript" src="js/engine.js"></script>
         <script type="text/javascript" src="js/events.js"></script>
         <script type="text/javascript" src="js/motions.js"></script>

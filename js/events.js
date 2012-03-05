@@ -50,6 +50,31 @@ var Events = {
                     Engine.smartBackgroundImage('images/sandiego.jpg','0 -320px');
                 });
             }
+            
+            
+            var oArgs = {
+                app_key: "PhSPfXsNh4bxtscN",
+                q: strl,
+                page_size: 25
+            };
+            
+            $(".section_white_container").html("");
+            
+            EVDB.API.call("/events/search", oArgs, function(oData)
+            {
+                $.each(oData.events.event, function() {
+                    if(this.description != null){
+                        var cont = "<div class='event'>" +
+                        this.title + "<br/><div class='inner_event'>" + this.description.substr(0,150) + "</div>";
+                    
+                        if(this.image != null){
+                            cont += "<img src='" + this.image.url +"'>";
+                        }
+                        cont += "</div>";
+                        $(".section_white_container").append(cont);
+                    }
+                });
+            });
         });
     }
 

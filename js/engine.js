@@ -10,11 +10,12 @@ var Engine = {
         });
     },
     
+    
+    
     smartBackgroundImage:function (url,type){
-        //create an img so the browser will download the image:
         $('<img />')
         .attr('src', url)
-        .load(function(){ //attach onload to set background-image
+        .load(function(){ 
             $('.header_bg').css('backgroundImage', 'url('+url+')' );
             $('.header_bg').css('backgroundPosition', type );
             $('.header_bg').fadeIn('slow');           

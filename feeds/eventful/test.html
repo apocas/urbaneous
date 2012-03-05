@@ -9,25 +9,39 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
-    </head>
-    <body>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
         <script type="text/javascript" >
             var oArgs = {
                 app_key: "PhSPfXsNh4bxtscN",
-                q: "Lisbon",
+                q: "New York",
                 page_size: 25
             };
             
             
             $(document).ready(function() {
                 alert("loading...");
+                
                 EVDB.API.call("/events/search", oArgs, function(oData)
                 {
                     // Note: this relies on the custom toString() methods below
-                    alert(oData.toString());
+                    //$("#tarea").html("<pre>" + JSON.stringify(oData.events) + "</pre>");
+                    
+                    //for (x in oData.events)
+                    //{
+                    //    $("#tarea").append(x.name + "<br/>");
+                    //}
+                    
+                    $.each(oData.events.event, function() {
+                        $("#tarea").append(this.title + "<br/>");
+                    });
+                    
+                    //alert(oData.toString());
                 });
             });
 
+            /*
             Object.prototype.toString = function()
             {
                 var s = "{\n";
@@ -42,7 +56,11 @@ and open the template in the editor.
             {
                 return '[' + this.join(", ") + ']';
             }
+             */
         </script>
-        <div>TODO write content</div>
+    </head>
+    <body>
+
+        <div id="tarea"></div>
     </body>
 </html>
