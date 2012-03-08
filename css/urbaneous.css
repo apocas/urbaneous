@@ -85,7 +85,7 @@ body {
     height:340px;
     background-position: center;
     z-index: 10;
-    box-shadow: 0px 0px 15px black;
+/*    box-shadow: 0px 0px 15px black;*/
 }
 
 .header_container{
@@ -197,7 +197,7 @@ body {
     border-radius: 15px;
     background-color: red;
     padding: 10px;
-    box-shadow: 0px 0px 5px black;
+/*    box-shadow: 0px 0px 5px black;*/
 }
 
 .inner_event {
@@ -207,7 +207,7 @@ body {
     border-radius: 15px;
     background-color: red;
     padding: 10px;
-    box-shadow: inset 0px 0px 5px black;
+/*    box-shadow: inset 0px 0px 5px black;*/
     width: 220px;
 }
 
@@ -252,7 +252,7 @@ body {
     float:left;
     height:200px;
     background-image:url('../images/background_gray.png');
-    box-shadow: 0px 0px 15px black;
+/*    box-shadow: 0px 0px 15px black;*/
 }
 .section_gray_container{
     width: 1000px;

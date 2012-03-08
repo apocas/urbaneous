@@ -54,25 +54,26 @@ var Events = {
             
             var oArgs = {
                 app_key: "PhSPfXsNh4bxtscN",
-                q: strl,
-                page_size: 25
+                location: strl,
+                page_size: 5,
+                sort_order: "popularity"
             };
+            alert(oArgs.location);
             
             $(".section_white_container").html("");
             
             EVDB.API.call("/events/search", oArgs, function(oData)
             {
                 $.each(oData.events.event, function() {
-                    if(this.description != null){
                         var cont = "<div class='event'>" +
-                        this.title + "<br/><div class='inner_event'>" + this.description.substr(0,150) + "</div>";
-                    
+                        this.title + this.city_name+"<br/><div class='inner_event'>" + this.description.substr(0,150) + "</div>";
+                        alert("oi");
                         if(this.image != null){
                             cont += "<img src='" + this.image.url +"'>";
                         }
                         cont += "</div>";
                         $(".section_white_container").append(cont);
-                    }
+             
                 });
             });
         });
