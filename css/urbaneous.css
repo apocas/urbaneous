@@ -66,8 +66,14 @@ body {
 
 @font-face {
     font-family: comforta;
-    src: url('Comfortaa-Bold.ttf')
+    src: url('Comfortaa-Regular.ttf')
 }
+@font-face {
+    font-family: comforta;
+    src: url('Comfortaa-Regular.eot')
+}
+
+
 
 .header_bg{
     position: absolute;
@@ -142,6 +148,7 @@ body {
     line-height: 48px;
     margin-top:25px;
     font-family: comforta;
+    font-weight: 200;
     font-size:44px;
     color:white;
     text-shadow: 1px 1px 1px #000;
