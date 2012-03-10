@@ -63,14 +63,14 @@ body {
     src: url('Sketch_Block.ttf');
 
 }
+@font-face {
+    font-family: comforta;
+    src: url('Comfortaa-Regular.eot');
+}
 
 @font-face {
     font-family: comforta;
-    src: url('Comfortaa-Regular.ttf')
-}
-@font-face {
-    font-family: comforta;
-    src: url('Comfortaa-Regular.eot')
+    src: url('Comfortaa-Regular.ttf');
 }
 
 
@@ -83,7 +83,7 @@ body {
     z-index: 1;
 }
 .header{
-    padding-top:20px;
+    padding-top:5px;
     position: absolute;
     width:100%;
     float:left;

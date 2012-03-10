@@ -7,15 +7,57 @@
         <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-        
+
         <script type="text/javascript" src="js/engine.js"></script>
         <script type="text/javascript" src="js/events.js"></script>
         <script type="text/javascript" src="js/motions.js"></script>
+        <script type="text/javascript" src="js/jquery.history.js"></script>
         <link rel="stylesheet" href="css/urbaneous.css" type="text/css" />
+        <style>
+            html{
+                max-width:10000px;
+                overflow:hidden;
+            }
+        </style>
         <script>
-        
+            function pageload(hash) {
+		
+                if(hash) {       
+                    
+                   
+                    $('html, body').animate({
+                        scrollLeft: $("."+hash).offset().left
+                    }, 1000);
+                }
+            }
             $(function() {
                 Engine.init();
+                var teste = $(window).width();
+                //alert(teste);
+                $('.big_section').css("width",teste);
+                $('.works').css("left",teste);
+                $('.download').css("left",teste*2);
+                $('.contacts').css("left",teste*3);
+            });
+            
+            jQuery(document).ready(function($){ 
+     
+                $.historyInit(pageload);
+                    
+                $(window).hashchange( function(){
+                    // Alerts every time the hash changes!
+                    var hash = location.hash;
+                    hash = hash.replace(/^.*#/, '');
+                       
+                    if(hash == ""){
+                        hash = "home"
+                    }
+                    pageload(hash)
+
+                })
+
+                // Trigger the event (useful on page load).
+                $(window).hashchange();
             });
                    
           
@@ -25,41 +67,122 @@
     </head>
 
     <body>
-        <div class="header_bg">&nbsp; </div>
-        <header class="header">
+        <header class="header" style="height:55px;position: fixed; background-image: url('images/background.png')">
             <div class="header_container">
                 <figure class="header_logo">
-                    <img src="images/biglogo.png" alt="Urbaneous logo"/>
+                    <img style="margin-top:6px;margin-left:0px;width:80%; height:auto;" src="images/biglogo.png" alt="Urbaneous logo"/>
                 </figure>
                 <nav class="header_nav">
                     <ul>
-                        <li><a href="">home</a></li>
-                        <li><a href="">how it works</a></li>
-                        <li><a href="">download</a></li>
-                        <li><a href="">contacts</a></li>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#works">how it works</a></li>
+                        <li><a href="#download">download</a></li>
+                        <li><a href="#contacts">contacts</a></li>
                     </ul>
                 </nav>
+
+            </div>
+        </header>
+        <section class="home big_section section_white" style="position:absolute;left:0;max-width: 1920px;margin-top:55px;background-image: url('images/background.png')">
+            <div class="section_white_container">
                 <div class="header_banner">
-                    <div class="header_banner_left">
-                        <div class="header_banner_headline">
+                    <div class="header_banner_left" style="margin-top:20px;">
+                        <div class="header_banner_headline" style="float:left;margin-left:0px;">
                             What's around<br/>
                             Anytime, <span style="color:#2fb0dc">Anywhere</span>
                         </div>
-                        <div class="header_banner_box">
-                            <input class="defaultText" title="Enter your city" id="city" type="text"/>
+                        <figure >
+                            <img style="margin-top:30px;margin-left:50px" class="header_banner_world" alt="World Logo" src="images/cities.png"/>
+                        </figure>
+                        <div class="header_banner_headline" style="float:left;margin-left:0px;margin-top:45px;">
+                            soon on <span style="color:#2fb0dc">market and web!</span>
                         </div>
-                        <div class="header_banner_box_button">&nbsp;</div>
                     </div>
-                    <div class="header_banner_right">
+                    <div class="header_banner_right" style="margin-top: 40px;">
                         <figure>
                             <img class="header_banner_world" alt="World Logo" src="images/mobile.png"/>
                         </figure>
                     </div>
                 </div>
+
             </div>
-        </header>
-        <section class="section_white">
-           
+            <div class="section_white_container" style="color:white;">
+                <article class="section_white_box" style="margin-top:90px;">
+                    <div class="section_white_box_title" style="color:lightGray;font-weight: 200;">Find Everything</div>
+                    <div class="section_white_box_text">
+                        Find <span class="blue_transform">what's going on</span> around you <br/>
+                        with <span class="blue_transform">your computer</span> or <br/>
+                        your <span class="blue_transform">mobile phone</span><br/>
+                    </div>
+                </article>
+                <div class="section_white_box_separator" style="margin-top:90px;">
+                    &nbsp;
+                </div>
+                <article class="section_white_box" style="margin-top:90px;">
+                    <div class="section_white_box_title" style="color:lightGray;font-weight: 200;">Help to choose</div>
+                    <div class="section_white_box_text">
+                        <span class="blue_transform">See photos</span> and <span class="blue_transform">reviews</span> <br/>
+                        on <span class="blue_transform">past editions</span> of the event.
+                    </div>
+                </article> 
+                <div class="section_white_box_separator" style="margin-top:90px;">
+                    &nbsp;
+                </div>
+                <article class="section_white_box" style="border:none;margin-top:90px;">
+                    <div class="section_white_box_title" style="color:lightGray;font-weight: 200;">Social Share</div>
+                    <div class="section_white_box_text">
+                        Share with <span class="blue_transform">your friends</span> everything <br />
+                        that goes on <span class="blue_transform">around you</span> <br/>
+                        and <span class="blue_transform">around them</span>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+        <section class="works big_section section_gray" style="position:absolute;max-width: 1920px;height:100%;padding-top:120px;">
+            <div class="section_gray_container">
+                <div class="section_gray_left">
+                    <figure class="section_gray_pcimg">
+                        <img src="images/pcimg.png" alt="Compatibities"/>
+                    </figure>
+                </div>
+                <div class="section_gray_right">
+                    <div class="section_gray_down_title">Get mobile application</div>
+                    <div class="section_gray_down_text">Avaible for iPhone, Android, Windows Phone</div>
+                    <div class="section_gray_bt_down">&nbsp;</div>
+                </div>
+
+            </div>
+        </section>
+         <section class="download big_section section_gray" style="position:absolute;max-width: 1920px;height:100%;padding-top:120px;">
+            <div class="section_gray_container">
+                <div class="section_gray_left">
+                    <figure class="section_gray_pcimg">
+                        <img src="images/pcimg.png" alt="Compatibities"/>
+                    </figure>
+                </div>
+                <div class="section_gray_right">
+                    <div class="section_gray_down_title">Get mobile application</div>
+                    <div class="section_gray_down_text">Avaible for iPhone, Android, Windows Phone</div>
+                    <div class="section_gray_bt_down">&nbsp;</div>
+                </div>
+
+            </div>
+        </section>
+         <section class="contacts big_section section_gray" style="position:absolute;max-width: 1920px;height:100%;padding-top:120px;">
+            <div class="section_gray_container">
+                <div class="section_gray_left">
+                    <figure class="section_gray_pcimg">
+                        <img src="images/pcimg.png" alt="Compatibities"/>
+                    </figure>
+                </div>
+                <div class="section_gray_right">
+                    <div class="section_gray_down_title">Get mobile application</div>
+                    <div class="section_gray_down_text">Avaible for iPhone, Android, Windows Phone</div>
+                    <div class="section_gray_bt_down">&nbsp;</div>
+                </div>
+
+            </div>
         </section>
         <!--<footer class="footer">
             <div class="footer_container">
