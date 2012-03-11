@@ -4,54 +4,71 @@
         <meta charset="utf-8" />
         <title>Urbaneous - Coming Soon</title>
         <LINK REL="SHORTCUT ICON" HREF="images/favicon.ico"> 
-        <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-
-        <script type="text/javascript" src="js/engine.js"></script>
-        <script type="text/javascript" src="js/events.js"></script>
-        <script type="text/javascript" src="js/motions.js"></script>
-        <script type="text/javascript" src="js/jquery.history.js"></script>
+        <script type="text/javascript" src="js/hashchange.js"></script>
         <link rel="stylesheet" href="css/urbaneous.css" type="text/css" />
         <style>
             html{
-                max-width:10000px;
-                overflow:hidden;
+                max-width:1920px;
+                overflow-x:hidden;
+                background-image: url('images/background.png');
             }
         </style>
         <script>
-            function pageload(hash) {
-		
-                if(hash) {       
-                    
-                   
-                    $('html, body').animate({
-                        scrollLeft: $("."+hash).offset().left
-                    }, 1000);
-                }
-            }
             $(function() {
-                Engine.init();
                 var teste = $(window).width();
                 //alert(teste);
                 $('.big_section').css("width",teste);
                 $('.works').css("left",teste);
                 $('.download').css("left",teste*2);
                 $('.contacts').css("left",teste*3);
+                
+                
             });
-            
-            jQuery(document).ready(function($){ 
+          
+                   
+          
+        </script>
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+    
+        </script>
+
+        <script>
+            function pageload(hash) {
+		
+                if(hash) {       
+                    
+                    $('html, body').animate({
+                        scrollLeft: $("."+hash).offset().left
+                    }, 1000);
+                }
+            }
      
-                $.historyInit(pageload);
+            jQuery(document).ready(function($){ 
+                $(window).resize(function() {
+                    var teste = $(window).width();
+                    //alert(teste);
+                    $('.big_section').css("width",teste);
+                    $('.works').css("left",teste);
+                    $('.download').css("left",teste*2);
+                    $('.contacts').css("left",teste*3);
+
+                });
+
                     
                 $(window).hashchange( function(){
                     // Alerts every time the hash changes!
                     var hash = location.hash;
                     hash = hash.replace(/^.*#/, '');
-                       
                     if(hash == ""){
                         hash = "home"
                     }
+                    
                     pageload(hash)
 
                 })
@@ -59,18 +76,16 @@
                 // Trigger the event (useful on page load).
                 $(window).hashchange();
             });
-                   
-          
         </script>
         <!--[if IE]>
                 <script ƒsrc="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
 
     <body>
-        <header class="header" style="height:55px;position: fixed; background-image: url('images/background.png')">
+        <header class="header" style="padding-top:18px;height:55px;position: fixed; background-image: url('images/background.png')">
             <div class="header_container">
                 <figure class="header_logo">
-                    <img style="margin-top:6px;margin-left:0px;width:80%; height:auto;" src="images/biglogo.png" alt="Urbaneous logo"/>
+                    <img style="" src="images/biglogo.png" alt="Urbaneous logo"/>
                 </figure>
                 <nav class="header_nav">
                     <ul>
@@ -83,7 +98,7 @@
 
             </div>
         </header>
-        <section class="home big_section section_white" style="position:absolute;left:0;max-width: 1920px;margin-top:55px;background-image: url('images/background.png')">
+        <section class="home big_section section_white" style="position:absolute;left:0;max-width: 1920px;margin-top:55px;background-image: none;">
             <div class="section_white_container">
                 <div class="header_banner">
                     <div class="header_banner_left" style="margin-top:20px;">
@@ -139,37 +154,30 @@
             </div>
 
         </section>
-        <section class="works big_section section_gray" style="position:absolute;max-width: 1920px;height:100%;padding-top:120px;">
+        <section class="works big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
-                <div class="section_gray_left">
-                    <figure class="section_gray_pcimg">
-                        <img src="images/pcimg.png" alt="Compatibities"/>
-                    </figure>
-                </div>
-                <div class="section_gray_right">
-                    <div class="section_gray_down_title">Get mobile application</div>
-                    <div class="section_gray_down_text">Avaible for iPhone, Android, Windows Phone</div>
-                    <div class="section_gray_bt_down">&nbsp;</div>
-                </div>
+                <div class="header_banner_headline" style="color:#2fb0dc;float:left;margin-left:0px;">How it Works</div>
 
             </div>
         </section>
-         <section class="download big_section section_gray" style="position:absolute;max-width: 1920px;height:100%;padding-top:120px;">
+        <section class="download big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
-                <div class="section_gray_left">
-                    <figure class="section_gray_pcimg">
-                        <img src="images/pcimg.png" alt="Compatibities"/>
-                    </figure>
-                </div>
-                <div class="section_gray_right">
-                    <div class="section_gray_down_title">Get mobile application</div>
-                    <div class="section_gray_down_text">Avaible for iPhone, Android, Windows Phone</div>
-                    <div class="section_gray_bt_down">&nbsp;</div>
-                </div>
-
+                <div class="header_banner_headline" style="float:left;margin-left:0px;width:100%;margin-bottom: 30px;font-size:36px;"><span style="color:#2fb0dc;">download</span> urbaneous app</div>
+                <figure style="float:left;margin-left:40px;">
+                    <img style="width:80%;height:auto;" class="header_banner_world" alt="World Logo" src="images/mobile2.png"/>
+                </figure>
+                <figure style="float:left;margin-left:80px;">
+                    <img style="width:80%;height:auto;" class="header_banner_world" alt="World Logo" src="images/iphone.png"/>
+                </figure>
+                 <figure style="float:left;margin-left:80px;">
+                    <img style="width:80%;height:auto;" class="header_banner_world" alt="World Logo" src="images/nexus.png"/>
+                </figure>
+                 <div class="section_gray_bt_down" style="margin-left:30px;margin-top:20px;">&nbsp;</div>
+                  <div class="section_gray_bt_down" style="margin-left:63px;margin-top:20px;">&nbsp;</div>
+                   <div class="section_gray_bt_down" style="margin-left:70px;margin-top:20px;">&nbsp;</div>
             </div>
         </section>
-         <section class="contacts big_section section_gray" style="position:absolute;max-width: 1920px;height:100%;padding-top:120px;">
+        <section class="contacts big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
                 <div class="section_gray_left">
                     <figure class="section_gray_pcimg">
@@ -213,5 +221,7 @@
                 </div>
             </div>
         </footer>-->
+
     </body>
+
 </html>
