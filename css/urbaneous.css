@@ -421,3 +421,17 @@ body {
     width:50%;
     float:left;
 }
+.header_mobile{
+    width:240px;
+    height:457px;
+    position: absolute;
+    float:left;
+    background-image: url('../images/mobile_0.png');
+}
+.download_desc{
+    float:left;
+    color: white;
+    font-size:19px;
+    font-family: comfortaa;
+    text-transform: lowercase;
+}
