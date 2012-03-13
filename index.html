@@ -60,7 +60,7 @@
 
                 });
 
-                    var current = 0;
+                var current = 0;
                 $(window).hashchange( function(){
                     // Alerts every time the hash changes!
                     var hash = location.hash;
@@ -73,18 +73,37 @@
 
                 })
                 setInterval(function() {
-                   if(current != 7){
-                       current++;
-                   }
-                   else{
-                       current = 0;
-                   }
-                   var desloc = 196 * current;
-                   $('.wrapper_inside').animate({left: "-"+desloc},1000);
+                    if(current != 7){
+                        current++;
+                    }
+                    else{
+                        current = 0;
+                    }
+                    var desloc = 196 * current;
+                    $('.wrapper_inside').animate({left: "-"+desloc},1000);
                 }, 3000);
 
                 // Trigger the event (useful on page load).
                 $(window).hashchange();
+                $(".defaultText").focus(function(srcc)
+                {
+                    if ($(this).val() == $(this)[0].title)
+                    {
+                        $(this).removeClass("defaultTextActive");
+                        $(this).val("");
+                    }
+                });
+    
+                $(".defaultText").blur(function()
+                {
+                    if ($(this).val() == "")
+                    {
+                        $(this).addClass("defaultTextActive");
+                        $(this).val($(this)[0].title);
+                    }
+                });
+    
+                $(".defaultText").blur();    
             });
         </script>
         <!--[if IE]>
@@ -137,7 +156,7 @@
                 </div>
 
             </div>
-            <div class="section_white_container" style="color:white;">
+            <!--<div class="section_white_container" style="color:white;">
                 <article class="section_white_box" style="margin-top:90px;">
                     <div class="section_white_box_title" style="color:lightGray;font-weight: 200;">Find Everything</div>
                     <div class="section_white_box_text">
@@ -167,7 +186,7 @@
                         and <span class="blue_transform">around them</span>
                     </div>
                 </article>
-            </div>
+            </div>-->
 
         </section>
         <section class="works big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
@@ -179,27 +198,48 @@
         <section class="download big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
                 <div class="header_banner_headline" style="float:left;margin-left:0px;width:100%;margin-bottom: 30px;font-size:36px;"><span style="color:#2fb0dc;">download</span> urbaneous app</div>
-                <figure style="float:left;margin-left:100px;">
-                    <img style="width:80%;height:auto;" class="header_banner_world" alt="World Logo" src="images/mobile.png"/>
+                <figure style="float:left;margin-left:80px;">
+                    <img style="width:70%;height:auto;" class="header_banner_world" alt="World Logo" src="images/mobile.png"/>
                 </figure>
                 <figure style="float:left;margin-left:80px;">
-                    <img style="width:80%;height:auto;" class="header_banner_world" alt="World Logo" src="images/iphone.png"/>
+                    <img style="width:70%;height:auto;" class="header_banner_world" alt="World Logo" src="images/iphone.png"/>
                 </figure>
                 <figure style="float:left;margin-left:80px;">
-                    <img style="width:80%;height:auto;" class="header_banner_world" alt="World Logo" src="images/nexus.png"/>
+                    <img style="width:70%;height:auto;margin-top:10px;" class="header_banner_world" alt="World Logo" src="images/nexus.png"/>
                 </figure>
-                <div class="download_desc" style="margin-left:80px;">Windows Phone 7 <span style="color:#2fb0dc;">Market</span></div>
-                <div class="download_desc" style="margin-left:80px;">iPhone/iPad App <span style="color:#2fb0dc;">Market</span></div>
-                <div class="download_desc" style="margin-left:80px;">Android <span style="color:#2fb0dc;">Market</span></div>
-                <div class="section_gray_bt_down" style="margin-left:30px;margin-top:20px;">&nbsp;</div>
-                <div class="section_gray_bt_down" style="margin-left:63px;margin-top:20px;">&nbsp;</div>
-                <div class="section_gray_bt_down" style="margin-left:70px;margin-top:20px;">&nbsp;</div>
+                <div class="download_desc" style="margin-left:80px;margin-top:10px;">Windows Phone 7 <span style="color:#2fb0dc;">Market</span></div>
+                <div class="download_desc" style="margin-left:94px;margin-top:10px;">iPhone/iPad App <span style="color:#2fb0dc;">Market</span></div>
+                <div class="download_desc" style="margin-left:110px;margin-top:10px;">Android phone <span style="color:#2fb0dc;">Market</span></div>
+                <div class="download_desc2" style="margin-left:80px;margin-top:3px;">Status: <span style="color:white;">waiting certification</span></div>
+                <div class="download_desc2" style="margin-left:123px;margin-top:3px;">Status: <span style="color:white;">developing</span></div>
+                <div class="download_desc2" style="margin-left:203px;margin-top:3px;">Status: <span style="color:white;">developing</span></div>
+
             </div>
         </section>
         <section class="contacts big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
                 <div class="header_banner_headline" style="float:left;margin-left:0px;width:100%;margin-bottom: 30px;font-size:36px;"><span style="color:#2fb0dc;">say something</span> to us</div>
-
+                <div style="width:590px;float:left;border-right-width: 1px;padding-right:50px;border-right-style:dashed;border-color:darkgray;">
+                <div style="width:100%;float:left;">
+                    <div class="header_banner_box3" >
+                        <input class="defaultText" style="color:white;font-family: 'Lucida Sans';font-size:16px;" title="Enter your name" id="name" type="text"/>
+                    </div>
+                </div> 
+                <div style="width:100%;float:left;">
+                    <div class="header_banner_box3">
+                        <input class="defaultText" style="color:white;font-family: 'Lucida Sans';font-size:16px;" title="Enter your email" id="email" type="text"/>
+                    </div>
+                </div>
+                <div style="width:100%;float:left;">
+                    <div class="header_banner_box2">
+                        <textarea class="defaultText" title="Enter your message" id="message"></textarea>
+                    </div>
+                </div>
+                <div class="email_button">&nbsp;</div>
+                </div>
+                <div style="width:300px;float:left;">
+                    
+                </div>
             </div>
         </section>
         <!--<footer class="footer">

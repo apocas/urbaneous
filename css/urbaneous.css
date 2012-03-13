@@ -159,7 +159,6 @@ body {
     height: 69px;
     background-image: url('../images/box.png');
     float:left;
-    margin-top:10px;
     margin-left:26px;
 }
 .header_banner_box input{
@@ -174,6 +173,53 @@ body {
     font-size: 28px;
     font-weight: lighter;
     background-color: transparent;
+}
+.header_banner_box2{
+    width:562px;
+    height: 211px;
+    background-image: url('../images/bigtext.png');
+    float:left;
+    margin-left:16px;
+}
+.header_banner_box2 textarea{
+      background-color: transparent;
+    border: medium none;
+    color: white;
+    font-family: "Lucida Sans";
+    font-style: italic;
+    font-size: 14px;
+    font-weight: lighter;
+    overflow: hidden;
+    height: 225px;
+    margin-left: 20px;
+    outline: 0 none;
+    padding-top: 25px;
+    resize: none;
+    width: 530px;
+}
+.header_banner_box3{
+    width:247px;
+    height: 51px;
+    margin-top:10px;
+    background-image: url('../images/minitext.png');
+    float:left;
+    margin-left:16px;
+}
+.header_banner_box3 input{
+      background-color: transparent;
+    border: medium none;
+    color: white;
+    font-family: "Lucida Sans";
+    font-style: italic;
+    font-size: 14px;
+    font-weight: lighter;
+    overflow: hidden;
+    height: 45px;
+    margin-left: 15px;
+    outline: 0 none;
+    padding-top: 4px;
+    resize: none;
+    width: 217px;
 }
 .defaultText { width: 300px;}
 .defaultTextActive { color:white; font-style: italic; }
@@ -434,4 +480,21 @@ body {
     font-size:19px;
     font-family: comfortaa;
     text-transform: lowercase;
+}
+.download_desc2{
+    float:left;
+    color:#2fb0dc;
+    font-size:15px;
+    font-family: "Lucida Sans";
+    font-style: italic;
+    text-transform: lowercase;
+}
+.email_button{
+       width:250px;
+    height:50px;
+    background-image: url('../images/botaoemail.png');
+    float:left;
+    margin-left: 318px;
+    margin-top:10px;
+    cursor: pointer;
 }
