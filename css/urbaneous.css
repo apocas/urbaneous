@@ -60,6 +60,11 @@ body {
 
 @font-face {
     font-family: sketch;
+    src: url('Sketch_Block.eot');
+
+}
+@font-face {
+    font-family: sketch;
     src: url('Sketch_Block.ttf');
 
 }
@@ -73,6 +78,15 @@ body {
     src: url('Comfortaa-Regular.ttf');
 }
 
+@font-face {
+    font-family: "Lucida Sans";
+    src: url('LucidaSans.eot');
+}
+
+@font-face {
+     font-family: "Lucida Sans";
+    src: url('LucidaSans.ttf');
+}
 
 
 .header_bg{
@@ -478,7 +492,7 @@ body {
     float:left;
     color: white;
     font-size:19px;
-    font-family: comfortaa;
+    font-family: comforta;
     text-transform: lowercase;
 }
 .download_desc2{
@@ -497,4 +511,43 @@ body {
     margin-left: 318px;
     margin-top:10px;
     cursor: pointer;
+}
+.contacts_tweets{
+    color:white;
+    font-size:22px;
+    font-family: "Lucida Sans";
+  float:left;
+margin-left: 20px;
+    margin-top: 14px;
+}
+.contacts_twimage{
+    float:left;
+     margin-left:50px;
+}
+.facebook_link{
+        font-size:17px;
+    font-family: "Lucida Sans";
+    text-decoration: none;
+    margin-left:20px;
+    margin-top:51px;
+}
+.facebook_link:hover{
+    text-decoration: underline;
+}
+.works_passo_1{
+    width:450px;
+    float:left;
+}
+.works_passo_1_number{
+    font-family: comforta;
+    font-size:72px;
+    color:#2fb0dc;
+    margin-top:103px;
+    float:left;
+}
+.works_passo_1_text{
+    font-family: "Lucida Sans";
+    font-size:18px;
+    width:100%;
+    float:left;
 }

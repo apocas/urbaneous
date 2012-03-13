@@ -7,7 +7,9 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/hashchange.js"></script>
+        <script type="text/javascript" src="js/jquery.tweet.js"></script>
         <link rel="stylesheet" href="css/urbaneous.css" type="text/css" />
+        <link rel="stylesheet" href="css/jquery.tweet.css" type="text/css" />
         <style>
             html{
                 max-width:1920px;
@@ -15,99 +17,7 @@
                 background-image: url('images/background.png');
             }
         </style>
-        <script>
-            $(function() {
-                var teste = $(window).width();
-                //alert(teste);
-                $('.big_section').css("width",teste);
-                $('.works').css("left",teste);
-                $('.download').css("left",teste*2);
-                $('.contacts').css("left",teste*3);
-                
-                
-            });
-          
-                   
-          
-        </script>
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-                s.parentNode.insertBefore(g,s)}(document,'script'));
-    
-        </script>
 
-        <script>
-            function pageload(hash) {
-		
-                if(hash) {       
-                    
-                    $('html, body').animate({
-                        scrollLeft: $("."+hash).offset().left
-                    }, 1000);
-                }
-            }
-     
-            jQuery(document).ready(function($){ 
-                $(window).resize(function() {
-                    var teste = $(window).width();
-                    //alert(teste);
-                    $('.big_section').css("width",teste);
-                    $('.works').css("left",teste);
-                    $('.download').css("left",teste*2);
-                    $('.contacts').css("left",teste*3);
-
-                });
-
-                var current = 0;
-                $(window).hashchange( function(){
-                    // Alerts every time the hash changes!
-                    var hash = location.hash;
-                    hash = hash.replace(/^.*#/, '');
-                    if(hash == ""){
-                        hash = "home"
-                    }
-                    
-                    pageload(hash)
-
-                })
-                setInterval(function() {
-                    if(current != 7){
-                        current++;
-                    }
-                    else{
-                        current = 0;
-                    }
-                    var desloc = 196 * current;
-                    $('.wrapper_inside').animate({left: "-"+desloc},1000);
-                }, 3000);
-
-                // Trigger the event (useful on page load).
-                $(window).hashchange();
-                $(".defaultText").focus(function(srcc)
-                {
-                    if ($(this).val() == $(this)[0].title)
-                    {
-                        $(this).removeClass("defaultTextActive");
-                        $(this).val("");
-                    }
-                });
-    
-                $(".defaultText").blur(function()
-                {
-                    if ($(this).val() == "")
-                    {
-                        $(this).addClass("defaultTextActive");
-                        $(this).val($(this)[0].title);
-                    }
-                });
-    
-                $(".defaultText").blur();    
-            });
-        </script>
-        <!--[if IE]>
-                <script ƒsrc="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
 
     <body>
@@ -127,6 +37,13 @@
 
             </div>
         </header>
+        <section class="home big_section section_white" style="position:absolute;left:0;height:300px;width: 1920px;margin-top:55px;background-image: none;">
+            <div class="section_white_container">
+
+            </div>
+
+
+        </section>
         <section class="home big_section section_white" style="position:absolute;left:0;max-width: 1920px;margin-top:55px;background-image: none;">
             <div class="section_white_container">
                 <div class="header_banner">
@@ -189,56 +106,121 @@
             </div>-->
 
         </section>
-        <section class="works big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
+
+        <section class="works big_section section_gray" style="color:white;position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
                 <div class="header_banner_headline" style="float:left;margin-left:0px;width:100%;margin-bottom: 30px;font-size:36px;"><span style="color:#2fb0dc;">working with</span> urbaneous</div>
-
+                <article class="section_white_box" style="margin-top:0px;">
+                    <div class="section_white_box_title" style="color:lightGray;font-weight: 200;">Find Everything</div>
+                    <div class="section_white_box_text">
+                        Find <span class="blue_transform">what's going on</span> around you <br/>
+                        with <span class="blue_transform">your computer</span> or <br/>
+                        your <span class="blue_transform">mobile phone</span><br/>
+                    </div>
+                </article>
+                <div class="section_white_box_separator" style="margin-top:0px;">
+                    &nbsp;
+                </div>
+                <article class="section_white_box" style="margin-top:0px;">
+                    <div class="section_white_box_title" style="color:lightGray;font-weight: 200;">Help to choose</div>
+                    <div class="section_white_box_text">
+                        <span class="blue_transform">See photos</span> and <span class="blue_transform">reviews</span> <br/>
+                        on <span class="blue_transform">past editions</span> of the event.
+                    </div>
+                </article> 
+                <div class="section_white_box_separator" style="margin-top:0px;">
+                    &nbsp;
+                </div>
+                <article class="section_white_box" style="border:none;margin-top:0px;">
+                    <div class="section_white_box_title" style="color:lightGray;font-weight: 200;">Social Share</div>
+                    <div class="section_white_box_text">
+                        Share with <span class="blue_transform">your friends</span> everything <br />
+                        that goes on <span class="blue_transform">around you</span> <br/>
+                        and <span class="blue_transform">around them</span>
+                    </div>
+                </article>
+                <article>
+                    <div class="works_passo_1" >
+                        <span class="works_passo_1_number">
+                            1.
+                        </span>
+                        <figure>
+                            <img src="images/world.png" style="width:170px;height:auto;float:left;margin-left:13px;" />
+                        </figure>
+                        <span class="works_passo_1_text">
+                            Urbaneous finds your Location
+                        </span>
+                        <span class="works_passo_1_text">
+                            or
+                        </span>
+                        <span class="works_passo_1_text">
+                            you can serach by city
+                        </span>
+                    </div>
+                </article>
             </div>
         </section>
         <section class="download big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
                 <div class="header_banner_headline" style="float:left;margin-left:0px;width:100%;margin-bottom: 30px;font-size:36px;"><span style="color:#2fb0dc;">download</span> urbaneous app</div>
-                <figure style="float:left;margin-left:80px;">
-                    <img style="width:70%;height:auto;" class="header_banner_world" alt="World Logo" src="images/mobile.png"/>
-                </figure>
-                <figure style="float:left;margin-left:80px;">
-                    <img style="width:70%;height:auto;" class="header_banner_world" alt="World Logo" src="images/iphone.png"/>
-                </figure>
-                <figure style="float:left;margin-left:80px;">
-                    <img style="width:70%;height:auto;margin-top:10px;" class="header_banner_world" alt="World Logo" src="images/nexus.png"/>
-                </figure>
-                <div class="download_desc" style="margin-left:80px;margin-top:10px;">Windows Phone 7 <span style="color:#2fb0dc;">Market</span></div>
-                <div class="download_desc" style="margin-left:94px;margin-top:10px;">iPhone/iPad App <span style="color:#2fb0dc;">Market</span></div>
-                <div class="download_desc" style="margin-left:110px;margin-top:10px;">Android phone <span style="color:#2fb0dc;">Market</span></div>
-                <div class="download_desc2" style="margin-left:80px;margin-top:3px;">Status: <span style="color:white;">waiting certification</span></div>
-                <div class="download_desc2" style="margin-left:123px;margin-top:3px;">Status: <span style="color:white;">developing</span></div>
-                <div class="download_desc2" style="margin-left:203px;margin-top:3px;">Status: <span style="color:white;">developing</span></div>
+                <div style="float:left;margin-left:80px;width:250px;">
+                    <figure style="float:left;">
+                        <img style="width:70%;height:auto;" class="header_banner_world" alt="World Logo" src="images/mobile.png"/>
+                    </figure>
+                    <div class="download_desc" style="margin-top:10px;">Windows Phone 7 <span style="color:#2fb0dc;">Market</span></div>
+                    <div class="download_desc2" style="margin-top:3px;">Status: <span style="color:white;">waiting certification</span></div>
+                </div>
+                <div style="float:left;margin-left:80px;width:250px;">
+                    <figure style="float:left;">
+                        <img style="width:70%;height:auto;" class="header_banner_world" alt="World Logo" src="images/iphone.png"/>
+                    </figure>
+                    <div class="download_desc" style="margin-top:10px;">iPhone/iPad App <span style="color:#2fb0dc;">Market</span></div>
+                    <div class="download_desc2" style="margin-top:3px;">Status: <span style="color:white;">developing</span></div>
 
+                </div>
+                <div style="float:left;margin-left:80px;width:250px;">
+                    <figure style="float:left;">
+                        <img style="width:70%;height:auto;margin-top:5px;" class="header_banner_world" alt="World Logo" src="images/android.png"/>
+                    </figure>
+
+                    <div class="download_desc" style="margin-top:3px;">Android phone <span style="color:#2fb0dc;">Market</span></div>
+
+                    <div class="download_desc2" style="margin-top:3px;">Status: <span style="color:white;">developing</span></div>
+                </div>
             </div>
         </section>
         <section class="contacts big_section section_gray" style="position:absolute;max-width: 1920px;padding-top:120px;background-image: none;">
             <div class="section_gray_container">
                 <div class="header_banner_headline" style="float:left;margin-left:0px;width:100%;margin-bottom: 30px;font-size:36px;"><span style="color:#2fb0dc;">say something</span> to us</div>
                 <div style="width:590px;float:left;border-right-width: 1px;padding-right:50px;border-right-style:dashed;border-color:darkgray;">
-                <div style="width:100%;float:left;">
-                    <div class="header_banner_box3" >
-                        <input class="defaultText" style="color:white;font-family: 'Lucida Sans';font-size:16px;" title="Enter your name" id="name" type="text"/>
+                    <div style="width:70%;float:left;">
+                        <div class="header_banner_box3" >
+                            <input class="defaultText" style="color:white;font-family: 'Lucida Sans';font-size:16px;" title="Enter your name" id="name" type="text"/>
+                        </div>
+                        <div class="header_banner_box3">
+                            <input class="defaultText" style="color:white;font-family: 'Lucida Sans';font-size:16px;" title="Enter your email" id="email" type="text"/>
+                        </div>
                     </div>
-                </div> 
-                <div style="width:100%;float:left;">
-                    <div class="header_banner_box3">
-                        <input class="defaultText" style="color:white;font-family: 'Lucida Sans';font-size:16px;" title="Enter your email" id="email" type="text"/>
+
+                    <div style="width:100%;float:left;">
+                        <div class="header_banner_box2">
+                            <textarea class="defaultText" title="Enter your message" id="message"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div style="width:100%;float:left;">
-                    <div class="header_banner_box2">
-                        <textarea class="defaultText" title="Enter your message" id="message"></textarea>
-                    </div>
-                </div>
-                <div class="email_button">&nbsp;</div>
+                    <div class="email_button">&nbsp;</div>
                 </div>
                 <div style="width:300px;float:left;">
-                    
+                    <figure class="contacts_twimage">
+                        <img style="width:70px;height:auto;" src="images/1331639629_gossip_birds.png" />
+                    </figure>
+                    <div class="contacts_tweets" style="">
+                        our last tweets
+                    </div>
+                    <div class="tweet">
+                    </div>
+                    <div class="facebook">
+                        <figure style="float: left;margin-left:60px;margin-top:30px;"><img src="images/facebook.png"/></figure><a target="_blank" href="http://wwww.facebook.com/urbaneous" class="facebook_link" style="float:left;color:white;">Urbaneous Facebook</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -271,7 +253,114 @@
                 </div>
             </div>
         </footer>-->
+        <script>
+            $(function() {
+                var teste = $(window).width();
+                //alert(teste);
+                $('.big_section').css("width",teste);
+                $('.works').css("left",teste);
+                $('.download').css("left",teste*2);
+                $('.contacts').css("left",teste*3);
+                
+                
+            });
+          
+                   
+          
+        </script>
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                s.parentNode.insertBefore(g,s)}(document,'script'));
+    
+        </script>
 
+        <script>
+            function pageload(hash) {
+		
+                if(hash) {       
+                    
+                    $('html, body').animate({
+                        scrollLeft: $("."+hash).offset().left
+                    }, 1000);
+                }
+            }
+     
+            jQuery(document).ready(function($){ 
+                $(window).resize(function() {
+                    var teste = $(window).width();
+                    //alert(teste);
+                    $('.big_section').css("width",teste);
+                    $('.works').css("left",teste);
+                    $('.download').css("left",teste*2);
+                    $('.contacts').css("left",teste*3);
+
+                });
+                $(window).scroll(function() {
+                    // alert('yeah!');
+                });
+                var current = 0;
+                $(window).hashchange( function(){
+                    // Alerts every time the hash changes!
+                    var hash = location.hash;
+                    
+                    hash = hash.replace(/^.*#/, '');
+                    
+                    if(hash == ""){
+                        hash = "home"
+                    }
+                    
+                    pageload(hash)
+
+                })
+                setInterval(function() {
+                    if(current != 7){
+                        current++;
+                    }
+                    else{
+                        current = 0;
+                    }
+                    var desloc = 196 * current;
+                    $('.wrapper_inside').animate({left: "-"+desloc},1000);
+                }, 3000);
+                $(".tweet").tweet({
+                    join_text: "auto",
+                    username: "AmiguinhoDesign",
+                    avatar_size: 48,
+                    count: 3,
+                    auto_join_text_default: "we said,",
+                    auto_join_text_ed: "we",
+                    auto_join_text_ing: "we were",
+                    auto_join_text_reply: "we replied",
+                    auto_join_text_url: "we were checking out",
+                    loading_text: "Loading Tweets"
+                });
+                // Trigger the event (useful on page load).
+                $(window).hashchange();
+                $(".defaultText").focus(function(srcc)
+                {
+                    if ($(this).val() == $(this)[0].title)
+                    {
+                        $(this).removeClass("defaultTextActive");
+                        $(this).val("");
+                    }
+                });
+    
+                $(".defaultText").blur(function()
+                {
+                    if ($(this).val() == "")
+                    {
+                        $(this).addClass("defaultTextActive");
+                        $(this).val($(this)[0].title);
+                    }
+                });
+    
+                $(".defaultText").blur();    
+            });
+        </script>
+        <!--[if IE]>
+                <script ƒsrc="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </body>
 
 </html>
